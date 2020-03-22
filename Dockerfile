@@ -4,6 +4,11 @@ FROM php:7.2-apache
 
 # Copy local code to the container image.
 COPY index.php /var/www/html/
+COPY config.php /var/www/html/
+COPY create.php /var/www/html/
+COPY delete.php /var/www/html/
+COPY layout.css /var/www/html/
+COPY update.php /var/www/html/
 
 # Use port 8080 in Apache configuration files.
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
