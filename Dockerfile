@@ -9,6 +9,8 @@ COPY create.php /var/www/html/
 COPY delete.php /var/www/html/
 COPY layout.css /var/www/html/
 COPY update.php /var/www/html/
+COPY phpinfo.php /var/www/html/
+
 
 # Use port 8080 in Apache configuration files.
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
